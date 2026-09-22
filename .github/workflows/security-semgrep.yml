@@ -27,7 +27,7 @@ jobs:
           semgrep scan \
             --config auto \
             --config .semgrep.yml \
-            --metrics=off \
+            --metrics=on \
             --json-output=semgrep-results.json \
             --sarif-output=semgrep-results.sarif \
             src/main/java
