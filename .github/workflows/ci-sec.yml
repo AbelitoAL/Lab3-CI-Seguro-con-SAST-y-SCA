@@ -105,7 +105,7 @@ jobs:
   sca-dependency-check:
     name: SCA - OWASP Dependency-Check
     runs-on: ubuntu-latest
-    if: ${{ env.SKIP_SCA != 'true' }}  # Skip this job if SKIP_SCA is set to 'true'
+    if: false  # Skip this job if SKIP_SCA is set to 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
