@@ -2,7 +2,7 @@ name: CI - Spring Boot DevSecOps
 
 on:
   schedule:
-    - cron: '10 20 * * *'  # Runs every day at midnight
+    - cron: '30 20 * * *'  # Runs every day at midnight
       timezone: 'America/La_Paz'
 
 # Cancel in-progress runs for the same branch/PR
