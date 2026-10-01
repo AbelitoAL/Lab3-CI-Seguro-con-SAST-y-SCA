@@ -2,7 +2,7 @@ name: Security - Semgrep
 
 on:
   push:
-    branches: [main, develop]
+    branches: [feature/**', 'bugfix/**', 'hotfix/**']
   pull_request:
     branches: [main, develop]
   workflow_dispatch:

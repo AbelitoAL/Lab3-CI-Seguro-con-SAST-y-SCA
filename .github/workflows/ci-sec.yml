@@ -2,7 +2,7 @@ name: CI - Spring Boot DevSecOps
 
 on:
   push:
-    branches: [ main, develop, 'feature/**', 'bugfix/**', 'hotfix/**' ]
+    branches: [ 'feature/**', 'bugfix/**', 'hotfix/**' ]
   pull_request:
     branches: [ main, develop ]
 
