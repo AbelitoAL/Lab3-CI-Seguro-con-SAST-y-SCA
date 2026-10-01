@@ -1,4 +1,4 @@
-name: CI - Spring Boot DevSecOps
+name: CI - Nightly - Spring Boot DevSecOps
 
 on:
   schedule:
