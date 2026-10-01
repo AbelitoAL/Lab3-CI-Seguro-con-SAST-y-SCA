@@ -1,10 +1,9 @@
 name: CI - Spring Boot DevSecOps
 
 on:
-  push:
-    branches: [ main, develop, 'feature/**', 'bugfix/**', 'hotfix/**' ]
-  pull_request:
-    branches: [ main, develop ]
+  schedule:
+    - cron: '10 20 * * *'  # Runs every day at midnight
+      timezone: 'America/La_Paz'
 
 # Cancel in-progress runs for the same branch/PR
 concurrency:
@@ -14,7 +13,6 @@ concurrency:
 env:
   JAVA_VERSION: '25'
   MAVEN_OPTS: '-Xmx2g'
-  SKIP_SCA: 'false'  # Set to 'true' to skip SCA (Dependency-Check) step and moving to nightly
 
 jobs:
   # ------------------------------------------------------------------
@@ -105,7 +103,6 @@ jobs:
   sca-dependency-check:
     name: SCA - OWASP Dependency-Check
     runs-on: ubuntu-latest
-    if: ${{ env.SKIP_SCA != 'true' }}  # Skip this job if SKIP_SCA is set to 'true'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
