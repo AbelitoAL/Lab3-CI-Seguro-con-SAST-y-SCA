@@ -103,3 +103,15 @@ Totales del reporte completo: antes 52 (8 CRITICAL, 16 HIGH, 23 MEDIUM, 5 LOW); 
      de GitHub Actions expiran a los siete días. Dependabot solo se activará cuando `.github/dependabot.yml` llegue a la rama
      predeterminada. Los resultados pueden cambiar al actualizarse la base de vulnerabilidades.
      `commons-text` puede eliminarse al cerrar la práctica porque no se usa.
+
+## Cierre de la práctica
+
+Después de conservar la comparación anterior, se retiró `commons-text` del `pom.xml` porque la
+aplicación no la utiliza (sección 16 de la guía). `mvn -B clean verify` sigue en `BUILD SUCCESS`
+(2 pruebas, 0 fallos) y `mvn dependency:tree -Dincludes=org.apache.commons:commons-text` ya no
+devuelve el componente. El quality gate continúa bloqueando por los hallazgos pendientes de las
+dependencias transitivas de Spring Boot descritos arriba.
+
+La configuración de Dependabot se publicó además en la rama `ci/dependabot`, sin el resto del
+laboratorio, para poder incorporarla a la rama predeterminada mediante un PR separado mientras
+este PR permanece bloqueado por el gate.
