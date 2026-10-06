@@ -9,7 +9,7 @@
 - Commit posterior (corregido): `cb35cffb83cfbfacb1b2fab5d6119c7026c22324`
 - Ejecución anterior: análisis local con Docker — evidencias en `antes-afb66ec/`. GitHub Actions: https://github.com/AbelitoAL/Lab3-CI-Seguro-con-SAST-y-SCA/actions/runs/37504281476 (falla en el paso "Quality gate HIGH y CRITICAL")
 - Ejecución posterior: análisis local con Docker — evidencias en `despues-cb35cff/`. GitHub Actions: https://github.com/AbelitoAL/Lab3-CI-Seguro-con-SAST-y-SCA/actions/runs/37504365558 (falla en el mismo paso por los hallazgos restantes)
-- Pull request: _pendiente_
+- Pull request: https://github.com/AbelitoAL/Lab3-CI-Seguro-con-SAST-y-SCA/pull/1
 - Versión de Trivy: 0.74.0 (`aquasec/trivy:0.74.0`), CycloneDX Maven Plugin 2.9.3 (spec 1.6)
 - Fecha y hora de los análisis: 6 de octubre de 2026 — anterior 13:18 (UTC-4), posterior 13:20 (UTC-4)
 
