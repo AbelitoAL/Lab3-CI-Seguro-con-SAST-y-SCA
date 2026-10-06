@@ -2,7 +2,7 @@
 
 ## Identificación
 
-- Grupo: _pendiente de completar_ (autor de los commits: AbelitoAL)
+- Grupo: Grupo 5
 - Repositorio: https://github.com/AbelitoAL/Lab3-CI-Seguro-con-SAST-y-SCA (rama `lab/sca-sbom`)
 - Commit de partida (`main`): `584fd8d9b9ce6d1ac4ef6d41cfbabc0f0f7ae3dc`
 - Commit anterior (vulnerable): `afb66ec439807d45112061e792a116cb62f51140`
