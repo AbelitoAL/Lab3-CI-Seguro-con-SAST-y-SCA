@@ -52,7 +52,7 @@ jobs:
               org.jacoco:jacoco-maven-plugin:report
 
       - name: Upload test & coverage reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: test-and-coverage-reports
@@ -125,7 +125,7 @@ jobs:
         # Remove "|| true" once you have suppressions in place and want hard fails
 
       - name: Upload Dependency-Check report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: dependency-check-report
@@ -156,7 +156,7 @@ jobs:
               org.apache.maven.plugins:maven-pmd-plugin:check || true
 
       - name: Upload SpotBugs / PMD reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: static-analysis-reports
